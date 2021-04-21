@@ -15,4 +15,4 @@ terraform/init:
 
 ## Override terraform apply
 terraform/apply:
-	@terraform apply -auto-approve -refresh=true -var-file="testing.tfvars"
+	@terraform apply -auto-approve -refresh=true -var-file="fixtures.us-east-2.tfvars"

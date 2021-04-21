@@ -12,3 +12,14 @@ output "random" {
   description = "Output \"random\" from example module"
   value = module.terraform-example-module.random
 }
+
+output "name" {
+  description = "Output \"name\" from example module"
+  value = module.terraform-example-module.name
+}
+
+## debug
+output "this" {
+  description = "Output \"this\" from example module"
+  value = module.terraform-example-module.this
+}

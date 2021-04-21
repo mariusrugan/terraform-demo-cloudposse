@@ -3,7 +3,8 @@ provider "aws" {
 }
 
 module "terraform-example-module" {
-  source = "git::https://github.com/mariusrugan/terraform-example-module.git?ref=develop"
+  #source = "git::https://github.com/mariusrugan/terraform-example-module.git?ref=develop"
+  source = "../terraform-example-module"
 
   example = var.example
   name = var.name
