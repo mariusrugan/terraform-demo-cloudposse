@@ -19,8 +19,10 @@
 #
 
 module "this" {
-  source  = "cloudposse/label/null"
-  version = "0.24.1" # requires Terraform >= 0.13.0
+  # source  = "cloudposse/label/null"
+  # version = "0.24.1" # requires Terraform >= 0.13.0
+
+  source = "git::https://github.com/mariusrugan/terraform-null-label.git?ref=develop"
 
   enabled             = var.enabled
   namespace           = var.namespace
@@ -53,6 +55,7 @@ variable "context" {
     delimiter           = null
     attributes          = []
     tags                = {}
+    tags_as_list        = []
     additional_tag_map  = {}
     regex_replace_chars = null
     label_order         = []

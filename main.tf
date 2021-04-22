@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-2"
+  region = var.region
 }
 
 module "terraform-example-module" {
@@ -8,6 +8,9 @@ module "terraform-example-module" {
 
   example = var.example
   name = var.name
+
+  namespace = module.this.namespace
+  environment = module.this.environment
 
   context = module.this.context
 }
